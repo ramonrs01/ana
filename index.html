@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="cont.js" defer></script>
+    <title>I WANT YOU ❤️</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .slider::-webkit-scrollbar {
+        display: none;
+      }
+
+      .slide {
+        flex: 0 0 100%;
+        height: 100vh;
+        scroll-snap-align: start;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
+
+        background: rgba(255, 255, 255, 0.18);
+
+        backdrop-filter: blur(20px);
+
+        border-radius: 30px;
+
+        padding: 25px;
+
+        color: white;
+
+        text-align: center;
+
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .cover {
+        width: 220px;
+        height: 220px;
+        border-radius: 20px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      .big {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+
+      .small {
+        opacity: 0.9;
+        font-size: 0.95rem;
+      }
+
+      .list p {
+        margin: 10px 0;
+        font-size: 1.05rem;
+      }
+
+      .play {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: white;
+
+        color: #ff2e63;
+
+        margin: 25px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .bar {
+        width: 100%;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      .progress {
+        width: 5%;
+        height: 100%;
+        background: white;
+      }
+
+      .swipe {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        animation: move 1.5s infinite;
+      }
+
+      @keyframes move {
+        50% {
+          transform: translateX(10px);
+        }
+      }
+
+      .pink {
+        background: linear-gradient(135deg, #ff6b9e, #ff8eb5, #ffc0cb);
+      }
+
+      .red {
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      }
+
+      .wine {
+        background: linear-gradient(135deg, #6a0572, #ab0f6f);
+      }
+
+      .rose {
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      }
+
+      .purple {
+        background: linear-gradient(135deg, #8e2de2, #ff6fd8);
+      }
+
+      .sunset {
+        background: linear-gradient(135deg, #ff5f6d, #ffc371);
+      }
+
+      .love {
+        background: linear-gradient(135deg, #ff0844, #ffb199);
+      }
+
+      .gold {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      }
+
+      .final {
+        background: linear-gradient(135deg, #ff1744, #ff8a80);
+      }
+
+      .contador {
+        margin: 20px 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="slider">
+      <!-- TELA 1 -->
+
+      <section class="slide pink">
+        <div class="card">
+          <img src="namoro.jpg" class="cover" />
+
+          <p>I LOVE YOU ❤️</p>
+
+          <h1>Nossa História</h1>
+
+          <p>Artista: Você</p>
+
+          <div class="swipe">➡️ Arraste para continuar</div>
+        </div>
+      </section>
+
+      <!-- TELA 2 -->
+
+      <section class="slide red">
+        <div class="card">
+          <h2>✨ Resumo</h2>
+
+          <div class="big">1</div>
+
+          <p>Pessoa responsável por 99% da minha felicidade</p>
+        </div>
+      </section>
+
+      <!-- TELA 3 -->
+
+      <section class="slide wine">
+        <div class="card">
+          <h2>❤️ Tempo da Nossa História de Namoro</h2>
+
+          <div id="contador" class="contador">Carregando...</div>
+
+          <p>Desde o momento em que nossas histórias se encontraram ✨</p>
+        </div>
+      </section>
+
+      <!-- TELA 4 -->
+
+      <section class="slide rose">
+        <div class="card">
+          <h2>🎵 Música mais tocada</h2>
+
+          <div class="big">∞</div>
+
+          <p>Sua risada</p>
+        </div>
+      </section>
+
+      <!-- TELA 5 -->
+
+      <section class="slide purple">
+        <div class="card">
+          <img src="best.jpg" class="cover" />
+
+          <h2>📸 Melhor capa do álbum</h2>
+
+          <p>Foto menos pior tirada. <br> hehehehe</p>
+        </div>
+      </section>
+
+      <!-- TELA 6 -->
+
+      <section class="slide sunset">
+        <div class="card">
+          <h2>🌹 Meu lugar favorito</h2>
+
+          <div class="big">❤️</div>
+
+          <p>Qualquer lugar onde você esteja.</p>
+        </div>
+      </section>
+
+      <!-- TELA 7 -->
+
+      <section class="slide gold">
+        <div class="card">
+          <h2>🥰 Coisas que amo em você</h2>
+
+          <div class="list">
+            <p>❤️ Sua doidice</p>
+
+            <p>❤️ Seu sorriso</p>
+
+            <p>❤️ Seu abraço</p>
+
+            <p>❤️ Seu carinho</p>
+
+            <p>❤️ Seu jeito velhinha</p>
+
+            <p>❤️ Seu coração</p>
+
+            <p>❤️ Seu charme</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TELA 8 -->
+
+      <section class="slide pink">
+        <div class="card">
+          <h2>🏆 Top sentimentos</h2>
+
+          <br />
+
+          <p>🥇 Amor</p>
+          <p>999.999 reproduções</p>
+
+          <br />
+
+          <p>🥈 Saudade</p>
+          <p>873.124 reproduções</p>
+
+          <br />
+
+          <p>🥉 Felicidade</p>
+          <p>812.777 reproduções</p>
+        </div>
+      </section>
+
+      <!-- TELA 9 -->
+
+      <section class="slide love">
+        <div class="card" style="text-align: justify;">
+          <h2>💌 Carta do artista</h2>
+
+          <p class="small">
+           Você é uma das pessoas mais incríveis que já conheci. O que começou como uma conversa boba entre duas pessoas que estudaram juntas em 2023 virou algo que nenhum de nós dois imaginava que aconteceria.
+            <br><br>
+            Eu não sabia que iria namorar uma das pessoas mais doidinhas, velhinhas e fantásticas que existem, e você não sabia que teria alguém terrível, pirracento e carrapatinho ao seu lado.
+            <br><br>
+            Enfim, você faz meus dias mais leves, mais felizes e muito mais especiais. Obrigado por cada conversa, cada beijo, cada abraço, cada risada e por todos os momentos que vivemos. ❤️
+          </p>
+        </div>
+      </section>
+
+      <!-- TELA 10 -->
+
+      <section class="slide wine">
+        <div class="card">
+          <h2>✨ Próximos lançamentos</h2>
+
+          <p>
+            📍 Novos passeios
+
+            <br /><br />
+
+            📍 Novas memórias
+
+            <br /><br />
+
+            📍 Mais risadas
+
+            <br /><br />
+
+            📍 Mais fotos juntos
+
+            <br /><br />
+
+            📍 Um futuro incrível
+
+            <br /><br />
+
+            <s>Pirraça</s>
+
+            <br /><br />
+
+            📍 Paciência
+
+            
+
+
+          </p>
+        </div>
+      </section>
+
+      <!-- TELA 11 -->
+
+      <section class="slide rose">
+        <div class="card">
+          <img src="zoo.jpg" class="cover" />
+
+          <h2>📀 Álbum do Ano</h2>
+
+          <h3>Momentos Inesquecíveis</h3>
+
+          <p>Uma coleção dos melhores momentos da minha vida.</p>
+        </div>
+      </section>
+
+      <!-- TELA 12 -->
+
+      <section class="slide final">
+        <div class="card">
+          <img src="acai.jpg" class="cover" />
+
+          <p>Agora tocando...</p>
+
+          <h1>Nós Dois ❤️</h1>
+
+          <p>Artista: Amor da Minha Vida</p>
+
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+
+          <div class="play">▶</div>
+
+          <p>
+            Obrigado por fazer parte da minha história.
+
+            <br /><br />
+
+            Feliz Dia dos Namorados 
+
+            <br /><br />
+
+            Eu te amo muito.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
